@@ -1,6 +1,7 @@
 export default class CardsList {
   constructor ({data = [], Component = {}}) {
     this.data = data;
+    this.Component = Component;
     this.cardItemElements = this.data.map((product)=> {
       const card = new Component(product);
       return card.element;
