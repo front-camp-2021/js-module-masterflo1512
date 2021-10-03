@@ -21,7 +21,8 @@ export default class Card {
     this.render();
   }
   getTemplate () {
-    return `<section class="card-container">
+    return `<div class="col-lg-4 col-md-6">
+                <section class="card-container">
     <div class="content">
         <div class="image">
             <img src="${this.images[0]}" alt="${this.title}">
@@ -68,7 +69,8 @@ export default class Card {
         </button>
 
     </div>
-</section>`
+</section>
+</div>`
   }
   render () {
     const wrapper = document.createElement('div');
