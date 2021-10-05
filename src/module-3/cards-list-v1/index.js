@@ -2,10 +2,7 @@ export default class CardsList {
   constructor ({data = [], Component = {}}) {
     this.data = data;
     this.Component = Component;
-    this.cardItemElements = this.data.map((product)=> {
-      const card = new Component(product);
-      return card.element;
-    })
+    this.update(this.data);
     this.render();
   }
   render () {
@@ -14,15 +11,22 @@ export default class CardsList {
     wrapper.append(...this.cardItemElements);
     this.element = wrapper;
   }
-  destroy () {
-
-  }
   update (newProducts) {
+    this.data = newProducts;
     this.cardItemElements = newProducts.map((product)=> {
-      const card = new Component(product);
+      const card = new this.Component(product);
       return card.element;
     })
     this.render();
+  }
+  remove () {
+    if (this.element) {
+      this.element.remove();
+    }  
+  }
+  destroy() {
+    this.remove();
+    this.element = null;
   }
 }
 

@@ -21,7 +21,7 @@ export default class Card {
     this.render();
   }
   getTemplate () {
-    return `<div class="col-lg-4 col-md-6">
+    return `<div class="col-lg-4 col-md-6" data-element=body>
                 <section class="card-container">
     <div class="content">
         <div class="image">
@@ -40,7 +40,7 @@ export default class Card {
         </div>
         <div class="name-description-container">
             <h3 class="product-name" title="${this.brand}">${this.brand}</h3>
-            <p class="product-description" title="${this.title}">${this.title}</p>
+            <p class="product-description" title="${this.title}">${this.title} ${this.category}</p>
         </div>
     </div>
     <div class="wish-add">
