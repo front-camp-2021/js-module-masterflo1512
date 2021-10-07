@@ -1,0 +1,119 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600&display=swap");
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Montserrat", sans-serif;
+}
+
+.filters-container {
+    width: 40%;
+    padding: 30px;
+}
+
+.filters-header {
+    width: 100%;
+    margin-bottom: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+h2 {
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 21px;
+    color: #2c2c2c;
+}
+
+.collapse-filters-btn {
+    padding: 9px;
+    background: #fff;
+    box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    border: 0;
+}
+
+.collapse-filters-btn>svg path:first-child {
+    transform: translateX(8px);
+}
+
+.collapse-filters-btn>svg {
+    transform: scale(1) translateY(3px);
+}
+
+.filters {
+    max-width: 100%;
+    padding: 20px;
+    background: #fff;
+    box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+}
+
+h3 {
+    font-weight: 600;
+    font-size: 18px;
+    line-height: 22px;
+    color: #2c2c2c;
+}
+
+.divider {
+    margin: 20px 0;
+    border-top: 1px solid #d6d6d6;
+}
+
+.filter-title {
+    margin-bottom: 20px;
+}
+
+.prices label>input {
+    margin-right: 15px;
+}
+
+.form-checkbox-category {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 10px;
+}
+
+.form-checkbox-category>label>input {
+    margin-right: 20px;
+}
+
+input[type="checkbox"], input[type="radio"] {
+    appearance: none;
+    width: 15px;
+    height: 15px;
+    border-radius: 2px;
+    border: 1px solid gray;
+}
+
+input:checked {
+    background: #6f64f8;
+}
+
+input[type="radio"] {
+    border-radius: 50%;
+    width: 16px;
+}
+
+.btn-filters {
+    width: 100%;
+    margin: 20px 0;
+    padding: 20px;
+    text-align: center;
+    background: #6f64f8;
+    box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    border: 0;
+}
+
+.button-title {
+    color: #fff;
+    text-transform: uppercase;
+    font-size: 18px;
+    line-height: 21px;
+}
