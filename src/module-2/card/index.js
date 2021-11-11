@@ -1,14 +1,14 @@
 export default class Card {
   element;
 
-  constructor ({
-    id = '',
+  constructor({
+    id = "",
     images = [],
-    title = '',
+    title = "",
     rating = 0,
     price = 0,
-    category = '',
-    brand = ''
+    category = "",
+    brand = "",
   } = {}) {
     this.id = id;
     this.images = images;
@@ -20,7 +20,7 @@ export default class Card {
 
     this.render();
   }
-  getTemplate () {
+  getTemplate() {
     return `<div class="col-lg-4 col-md-6" data-element=body>
                 <section class="card-container">
     <div class="content">
@@ -70,10 +70,14 @@ export default class Card {
 
     </div>
 </section>
-</div>`
+</div>`;
   }
-  render () {
-    const wrapper = document.createElement('div');
+  destroy() {
+    this.element = null;
+  }
+
+  render() {
+    const wrapper = document.createElement("div");
 
     wrapper.innerHTML = this.getTemplate();
 
